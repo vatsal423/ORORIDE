@@ -73,5 +73,6 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
             {
 
             }
+      //this is home activity
     }
 }
