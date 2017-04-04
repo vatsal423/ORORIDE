@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
-public class HomeActivity extends ActionBarActivity implements View.OnClickListener{
+public class HomeActivity extends ActionBarActivity{
 
     ImageView imgahm, imgraj, imgsur, imgvad;
     @Override
@@ -21,7 +21,15 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 
 
         imgahm = (ImageView) findViewById(R.id.imgahm);
-        imgahm.setClickable(true);
+        imgahm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                {
+                    Intent i = new Intent(HomeActivity.this,Main2Activity.class);
+                    startActivity(i);
+                }
+            }
+        });
 
         imgraj = (ImageView) findViewById(R.id.imgraj);
         imgraj.setClickable(true);
@@ -54,12 +62,11 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-  @Override
-    public void onClick(View v) {
+
+   /* public void onClick(View v) {
             if(v == imgahm)
             {
-                Intent i = new Intent(HomeActivity.this,MainActivity.class);
-                startActivity(i);
+
             }
             else if(v == imgraj)
             {
@@ -74,5 +81,5 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 
             }
       //this is home activity
-    }
+    }*/
 }
