@@ -47,7 +47,6 @@ public class HomeActivity extends ActionBarActivity{
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
-
     }
 
     @Override
