@@ -93,4 +93,28 @@
         android:layout_below="@+id/txtsrc"></Spinner>
 
 
+    <TextView
+        android:id="@+id/txtdest"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:text="CHOOSE YOUR DESTINATION"
+        android:layout_below="@+id/spin1"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        />
+
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:id="@+id/spin2"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtdest"></Spinner>
+
+
+
+
 </RelativeLayout>

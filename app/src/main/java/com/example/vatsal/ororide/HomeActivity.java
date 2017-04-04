@@ -1,8 +1,11 @@
 package com.example.vatsal.ororide;
 
+import android.app.ActionBar;
+import android.app.Activity;
 import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,7 +14,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
-public class HomeActivity extends ActionBarActivity{
+public class HomeActivity extends ActionBarActivity {
+
+    String[] ahm = new String[]{"select...","CTM","Vastrapur","Gita Mandir","Paldi"};
+    String[] raj = new String[]{};
+    String[] sur = new String[]{};
+    String[] vad = new String[]{};
+
+
 
     ImageView imgahm, imgraj, imgsur, imgvad;
     @Override
@@ -20,12 +30,19 @@ public class HomeActivity extends ActionBarActivity{
         setContentView(R.layout.activity_home);
 
 
+        final Spinner sp1 = (Spinner)findViewById(R.id.spin1);
+        final Spinner sp2 = (Spinner)findViewById(R.id.spin2);
+
+
 
         imgahm = (ImageView) findViewById(R.id.imgahm);
         imgahm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 {
+                       ArrayAdapter adp1 = new ArrayAdapter<String>(HomeActivity.this,android.R.layout.select_dialog_multichoice,ahm);
+                        sp1.setAdapter(adp1);
+                        sp2.setAdapter(adp1);
 
                 }
 
