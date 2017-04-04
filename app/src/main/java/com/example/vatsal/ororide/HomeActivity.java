@@ -20,25 +20,57 @@ public class HomeActivity extends ActionBarActivity{
         setContentView(R.layout.activity_home);
 
 
+
         imgahm = (ImageView) findViewById(R.id.imgahm);
         imgahm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 {
-                    Intent i = new Intent(HomeActivity.this,Main2Activity.class);
-                    startActivity(i);
+
                 }
             }
         });
 
+
+
         imgraj = (ImageView) findViewById(R.id.imgraj);
-        imgraj.setClickable(true);
+        imgraj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                {
+
+                }
+            }
+        });
+
+
+
+
 
         imgsur = (ImageView) findViewById(R.id.imgsur);
-        imgahm.setClickable(true);
+        imgsur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                {
+
+                }
+            }
+        });
+
+
+
+
 
         imgvad = (ImageView) findViewById(R.id.imgvad);
-        imgraj.setClickable(true);
+        imgvad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                {
+
+                }
+            }
+        });
+
 
     }
 
